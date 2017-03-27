@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Demo Validation Form</h2>
+
+    <form name="formName" ng-submit="submitForm(formData);" ng-if="!formSubmitted">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group" ng-class="{'form-invalid': formName.name.$invalid && formName.name.$touched}">
+                    <label>Name*</label>
+                    <input type="text" name="name" class="form-control" ng-model="formData.name" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group" ng-class="{'form-invalid': formName.email.$invalid && formName.email.$touched}">
+                    <label>Email*</label>
+                    <input type="email" name="email" class="form-control" ng-model="formData.email" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group" ng-class="{'form-invalid': formName.query.$invalid && formName.query.$touched}">
+                    <label>Query*</label>
+                    <textarea name="query" class="form-control" ng-model="formData.query" required></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" ng-disabled="formName.$invalid">Submit</button>
+        </div>
+    </form>
+    <div class="form-submission text-center" ng-if="formSubmitted">
+        <h3>Thank you for submitting the form!</h3>
+        <p>We will get back to you soon.</p>
+    </div>
+</div>

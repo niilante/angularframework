@@ -1,0 +1,135 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "../bower_components/flexslider/flexslider.css";
+@import "../bower_components/font-awesome/css/font-awesome.min.css";
+@import "../bower_components/fancyBox/source/jquery.fancybox.css";
+@import "../bower_components/swiper/dist/css/swiper.min.css";
+@import "../bower_components/smart-app-banner/smart-app-banner.css";
+
+/* Bootstrap Variables Goes Here */
+
+$brand-primary: #0d9dff !default;
+$brand-success: #84ce3c !default;
+$brand-warning: #ffec39 !default;
+$brand-danger: #fc483f !default;
+$brand-info: #000072 !default;
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+body {
+    padding-top: 70px;
+}
+
+img.loading {
+    text-align: center;
+    opacity: 1;
+    width: 32px !important;
+    height: auto;
+}
+
+img {
+    opacity: 0;
+    @include transition(all 300ms ease);
+}
+
+img.doneLoading {
+    opacity: 1;
+}
+
+nav li:hover .dropdown-menu {
+    display: block;
+}
+
+#map img {
+    opacity: 1;
+}
+
+a,
+.btn,
+[ui-sref] {
+    cursor: pointer;
+    @include transition(all ease 300ms);
+}
+
+footer {
+    font-size: 12px;
+    background-color: #eee;
+    padding: 10px 0;
+    p {
+        margin: 0;
+    }
+}
+
+//bootstrap forms
+.input-lg,
+.input-group-lg>.form-control,
+.input-group-lg>.input-group-addon,
+.input-group-lg>.input-group-btn>.btn,
+.btn,
+.form-control {
+    border-radius: 0;
+    @include box-shadow(none);
+}
+
+.form-control:focus {
+    border-color: $brand-primary;
+    outline: 0;
+    @include box-shadow(none);
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-invalid {
+    color: $brand-danger;
+    .form-control {
+        border-color: $brand-danger;
+        color: $brand-danger;
+        &::-webkit-input-placeholder {
+            color: $brand-danger;
+        }
+    }
+}
+
+.form-submission {
+    min-height: 300px;
+}
+
+//FLEX SLIDER FIXES
+.flex-direction-nav {
+    a {
+        height: auto;
+    }
+    .flex-prev {
+        left: 10px !important;
+    }
+    .flex-next {
+        right: 10px !important;
+    }
+}
+
+//SWIPER CSS
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+    background-image: url(../img/prev.png);
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+    background-image: url(../img/next.png);
+}
+
+
+/* Start writing sass here */
+
+.content {
+    min-height: 450px;
+}
+
+.full-img {
+    width: 100%;
+    display: block;
+}
+
+@import "fancybox-override";
+@import "mobile";

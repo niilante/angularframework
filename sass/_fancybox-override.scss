@@ -1,0 +1,54 @@
+#fancybox-loading,
+.fancybox-close,
+.fancybox-next span,
+.fancybox-prev span {
+    background-image: url("../img/fancybox_sprite.png");
+}
+
+.fancybox-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+#fancybox-loading div {
+    background: url('../img/fancybox_loading.gif') center center no-repeat;
+}
+
+
+/*Retina graphics!*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    #fancybox-loading,
+    .fancybox-close,
+    .fancybox-prev span,
+    .fancybox-next span {
+        background-image: inherit;
+    }
+    #fancybox-loading div {
+        background-image: url('../img/fancybox_loading@2x.gif');
+    }
+}
+
+.fancybox-nav {
+    height: 100%;
+    /* helps IE */
+}
+
+.fancybox-image {
+    opacity: 1 !important;
+}
+
+.fancybox-nav span {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.fancybox-nav.fancybox-next span {
+    background-image: url(../img/next.png);
+}
+
+.fancybox-nav.fancybox-prev span {
+    background-image: url(../img/prev.png);
+}

@@ -1,0 +1,26 @@
+<div class="container">
+
+    <flex-slider flex-slide="s in mySlides" prev-text="" next-text="">
+        <li>
+            <img ng-src="{{s}}">
+        </li>
+    </flex-slider>
+
+    <!--<ks-swiper-container loop="true" autoplay="3000" pagination-hide="false" show-nav-buttons="true" space-between="5" override-parameters="{'effect':'fade'}">
+        <ks-swiper-slide class="swiper-slide" ng-repeat="s in mySlides">
+            <img ng-src="{{s}}" class="full-img">
+        </ks-swiper-slide>
+    </ks-swiper-container>-->
+
+    <div class="row">
+        <div class="col-md-2" ng-repeat="s in mySlides">
+            <a ng-href="{{s}}" rel="gal" fancybox>
+                <img ng-src="{{s}}" class="full-img">
+            </a>
+        </div>
+        <div class="col-md-2">
+            <a class="various fancybox.iframe" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" fancybox><img ng-src="http://img.youtube.com/vi/L9szn1QQfas/maxresdefault.jpg" class="full-img"></a>
+        </div>
+    </div>
+
+</div>
